@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">MDTab</string>
+    <string name="tab_behavior">org.loader.mdtab.TabBehavior</string>
+</resources>
