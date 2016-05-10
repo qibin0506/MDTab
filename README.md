@@ -2,11 +2,9 @@
 
 **一个仿google photos和google G+的Material Design风格的Tabbar**
 
-as引入：`compile 'org.loader:mdtab:1.0.0'`
-
-具体使用方法可以参考`mdtabsamples`
-
 ### 如何使用
+
+as引入：`compile 'org.loader:mdtab:1.0.0'`
 
 ``` xml
 <org.loader.mdtab.MDTab
