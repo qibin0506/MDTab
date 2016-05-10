@@ -6,6 +6,8 @@
 
 as引入：`compile 'org.loader:mdtab:1.0.0'`
 
+在xml中使用
+
 ``` xml
 <org.loader.mdtab.MDTab
     android:id="@+id/tab"
