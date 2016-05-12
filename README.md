@@ -86,4 +86,5 @@ tab.setupWithViewPager(mViewPager);
 ```
 
 实现效果：
+
 ![](./art/3.gif)
