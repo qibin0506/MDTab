@@ -2,9 +2,12 @@
 
 **一个仿google photos和google G+的Material Design风格的Tabbar**
 
+### 更新 1.0.1
+增加与ViewPager联动
+
 ### 如何使用
 
-as引入：`compile 'org.loader:mdtab:1.0.0'`
+as引入：`compile 'org.loader:mdtab:1.0.1'`
 
 在xml中使用
 
@@ -74,3 +77,13 @@ as引入：`compile 'org.loader:mdtab:1.0.0'`
 效果如下:
 
 ![](./art/2.gif)
+
+### 和ViewPager一块使用
+
+调用方法
+``` java
+tab.setupWithViewPager(mViewPager);
+```
+
+实现效果：
+![](./art/3.gif)

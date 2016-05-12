@@ -12,6 +12,7 @@ import android.view.animation.TranslateAnimation;
  * Created by qibin on 16-5-7.
  */
 public class TabBehavior extends CoordinatorLayout.Behavior<View> {
+
     private TranslateAnimation mAnimation;
 
     public TabBehavior(Context context, AttributeSet attrs) {
@@ -26,10 +27,17 @@ public class TabBehavior extends CoordinatorLayout.Behavior<View> {
     }
 
     @Override
-    public void onNestedPreScroll(CoordinatorLayout coordinatorLayout,
-                                  View child, View target, int dx, int dy, int[] consumed) {
-        super.onNestedPreScroll(coordinatorLayout, child, target, dx, dy, consumed);
-        if(dy > 0) {
+    public void onNestedScroll(CoordinatorLayout coordinatorLayout, View child,
+                               View target, int dxConsumed, int dyConsumed,
+                               int dxUnconsumed, int dyUnconsumed) {
+        super.onNestedScroll(coordinatorLayout, child, target,
+                dxConsumed, dyConsumed, dxUnconsumed, dyUnconsumed);
+        if(Math.abs(dxConsumed) > Math.abs(dyConsumed)) {
+            child.clearAnimation();
+            return;
+        }
+
+        if(dyConsumed > 0) {
             if(child.getVisibility() == View.GONE) return;
             startAnim(child, 0, child.getMeasuredHeight());
         } else {

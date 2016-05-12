@@ -16,15 +16,15 @@ import android.widget.TextView;
  */
 public class RippleButton extends TextView {
 	
-	private Paint mPaint; // 绘制波纹的画笔
+	private Paint mPaint;
 	
-	private int mStepSize; // 波纹变化的步长
-	private int mMinRadius = 0; // 波纹从多大开始变化
-	private int mRadius; // 当前的波纹大小
-	private int mMaxRadius; // 波纹最大大小
-	private int mCenterX; // 该控件的中心位置
+	private int mStepSize;
+	private int mMinRadius = 0;
+	private int mRadius;
+	private int mMaxRadius;
+	private int mCenterX;
 	private int mCenterY;
-	private boolean isAnimating; // 是否正在动画中
+	private boolean isAnimating;
 	
 	private OnBeforeClickedListener mListener;
 	
