@@ -27,18 +27,18 @@ public class MainActivity extends AppCompatActivity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
 
+		initFragments();
+		initViewPager();
+
 		MDTab tab = (MDTab) findViewById(R.id.tab);
 		tab.setAdapter(new Adapter());
 		tab.itemChecked(0);
 		tab.setOnItemCheckedListener(new MDTab.OnItemCheckedListener() {
 			@Override
 			public void onItemChecked(int position, View view) {
-				Toast.makeText(MainActivity.this, mMenus[position], Toast.LENGTH_SHORT).show();
+				mViewPager.setCurrentItem(position);
 			}
 		});
-
-		initFragments();
-		initViewPager();
 
 		tab.setupWithViewPager(mViewPager);
 	}
@@ -56,8 +56,6 @@ public class MainActivity extends AppCompatActivity {
 				return mContentFragment.size();
 			}
 		});
-
-
 	}
 
 	private void initFragments() {
